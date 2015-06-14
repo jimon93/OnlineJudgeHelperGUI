@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .jumbotron
+    .container
+      h1 競プロが楽になるナニか
+
+  dl#info.dl-horizontal
+    dt コンテスト
+    dd#contest= contest
+
+    dt 問題ID
+    dd#problem= problem
+
+    dt 言語
+    dd#lang= lang
+
+    dt source file path
+    dd#filepath= filepath
+
+  #buttons(style="margin-bottom: 20px")
+    #start.btn.btn-default(style="width:100px") start
+    #stop.btn.btn-success(style="width:100px").hide watching...
+
+  #watching-panel.panel.panel-default.hide
+    #progress.panel-header.btn-group.btn-group-justified(role="group")
+      #download.btn.btn-xs.btn-default Fetch Sample Case
+      #compile.btn.btn-xs.btn-default Compile
+      #test.btn.btn-xs.btn-default Sample Test
+      #success.btn.btn-xs.btn-default All Success
+    pre#message.panel-body(style="margin: 0px")
+      | checking...
+

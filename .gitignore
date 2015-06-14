@@ -1,0 +1,5 @@
+setting.json
+.idea
+node_modules
+tests/*
+!tests/.gitkeep
